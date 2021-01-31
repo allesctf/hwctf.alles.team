@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ALLES! CTF 2020</title>
+
+    <meta charset="utf-8" />
+
+    <link href="https://cdn.jsdelivr.net/npm/@patternfly/patternfly@2.6.5/patternfly.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .pf-c-content {
+            padding: 20px 15px 60px;
+            padding-top: 100px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .camp-logo {
+            padding-right: auto;
+            max-width: 250px;
+        }
+
+        .sponsr-logo {
+            padding-right: auto;
+            max-width: 150px;
+        }
+
+        .alles-logo {
+            position: relative;
+            top: 5px;
+            max-height: 1.5em;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        #spoiler {
+            position: relative;
+        }
+
+        #test {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+
+        }
+
+
+        #spoiler>img {
+
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #ree {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-100%);
+            pointer-events: none;
+            background: url(secret.png);
+            background-size: contain;
+        }
+
+
+        #spoiler:hover>#ree {
+            background: url(secret2.png);
+            background-size: contain;
+
+        }
+
+        #test:checked~#ree {
+            background: url(0.9.19-release.png);
+            background-size: contain;
+        }
+
+
+        #test {}
+
+        .cake {
+            opacity: 0;
+            width: 64px;
+            height: 64px;
+            background-image: url("sprites/Cake_walk.png");
+            animation: playYCake 0.25s steps(6) infinite, moveCake 20s infinite linear, rotateCake 20s infinite;
+            position: absolute;
+        }
+
+        .cake:nth-of-type(2) {
+            animation-delay: calc(2s * 1);
+        }
+
+        .cake:nth-of-type(3) {
+            animation-delay: calc(2s * 2);
+        }
+
+        .cake:nth-of-type(4) {
+            animation-delay: calc(2s * 3);
+        }
+
+        .cake:nth-of-type(5) {
+            animation-delay: calc(2s * 4);
+        }
+
+        .cake:nth-of-type(6) {
+            animation-delay: calc(2s * 5);
+        }
+
+        .cake:nth-of-type(7) {
+            animation-delay: calc(2s * 6);
+        }
+
+        .cake:nth-of-type(8) {
+            animation-delay: calc(2s * 7);
+        }
+
+        .cake:nth-of-type(9) {
+            animation-delay: calc(2s * 8);
+        }
+
+        .cake:nth-of-type(10) {
+            animation-delay: calc(2s * 9);
+        }
+
+        @keyframes playYCake {
+            from {
+                background-position-y: 0px;
+                opacity: 1;
+            }
+
+            to {
+                background-position-y: -384px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveCake {
+            0% {
+                top: 0px;
+                left: -16px;
+            }
+
+            24.99% {
+                top: calc(100% - 64px);
+                left: -16px;
+            }
+
+            25% {
+                top: calc(100% - 64px + 16px);
+                left: -16px;
+            }
+
+            49.99% {
+                top: calc(100% - 64px + 16px);
+                left: calc(100% - 64px);
+            }
+
+            50% {
+                top: calc(100% - 64px + 16px);
+                left: calc(100% - 64px + 16px);
+            }
+
+            74.99% {
+                top: -16px;
+                left: calc(100% - 64px + 16px);
+            }
+
+            75% {
+                top: -16px;
+                left: calc(100% - 64px);
+            }
+
+
+            100% {
+                top: -16px;
+                left: 0px;
+            }
+        }
+
+        @keyframes rotateCake {
+            0% {
+                transform: rotate(90deg);
+            }
+
+            24.99% {
+                transform: rotate(90deg);
+            }
+
+            25% {
+                transform: rotate(0deg);
+            }
+
+            49.99% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-90deg);
+            }
+
+            74.99% {
+                transform: rotate(-90deg);
+            }
+
+            75% {
+                transform: rotate(180deg);
+            }
+
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pf-c-content">
+        <h1 class="pf-c-title pf-m-3xl">ALLES! CTF 2021 HW Edition</h1>
+        <p>
+            We are proud to announce this special event, a tournament never seen before in the ctf scene.
+        </p>
+        <ul>
+            <li>
+                <b>WHEN?</b> 01.04.2021
+            </li>
+
+            <li>
+                <b>WHERE?</b> <a href="">comming soon!</a>
+            </li>
+
+            <li>
+                <b>WHAT?</b> <a href="https://www.hedgewars.org">click me</a>
+            </li>
+
+        </ul>
+
+        <div id=spoiler>
+            <input type="checkbox" id="test">
+
+            <img id="temp" src="secret.png">
+            <div id="ree">
+
+            </div>
+
+        </div>
+        <div class="cake">
+
+        </div>
+        <div class="cake">
+
+        </div>
+        <div class="cake">
+
+        </div>
+        <div class="cake">
+
+        </div>
+        <div class="cake">
+
+        </div>
+        <div class="cake">
+
+        </div>
+        <div class="cake">
+
+        </div>
+        <div class="cake">
+
+        </div>
+        <div class="cake">
+
+        </div>
+        <div class="cake">
+
+        </div>
+
+    </div>
+</body>
+
+</html>
