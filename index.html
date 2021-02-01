@@ -95,6 +95,8 @@
             background-image: url("sprites/Cake_walk.png");
             animation: playYCake 0.25s steps(6) infinite, moveCake 20s infinite linear, rotateCake 20s infinite;
             position: absolute;
+
+
         }
 
         .cake:nth-of-type(2) {
@@ -147,44 +149,44 @@
 
         @keyframes moveCake {
             0% {
-                top: 0px;
+                top: -18px;
                 left: -16px;
             }
 
             24.99% {
-                top: calc(100% - 64px);
+                top: calc(100% - 64px + 16px);
                 left: -16px;
             }
 
             25% {
                 top: calc(100% - 64px + 16px);
-                left: -16px;
+                left: -18px;
             }
 
             49.99% {
                 top: calc(100% - 64px + 16px);
-                left: calc(100% - 64px);
+                left: calc(100% - 64px + 18px);
             }
 
             50% {
-                top: calc(100% - 64px + 16px);
+                top: calc(100% - 64px + 18px);
                 left: calc(100% - 64px + 16px);
             }
 
             74.99% {
-                top: -16px;
+                top: -17px;
                 left: calc(100% - 64px + 16px);
             }
 
             75% {
                 top: -16px;
-                left: calc(100% - 64px);
+                left: calc(100% - 64px + 18px);
             }
 
 
             100% {
                 top: -16px;
-                left: 0px;
+                left: -17px;
             }
         }
 
